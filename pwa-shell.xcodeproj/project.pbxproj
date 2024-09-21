@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173FB0D02C9EC4DF00CE2EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173FB0CF2C9EC4DF00CE2EB8 /* Main.storyboard */; };
+		17CE489D2C9EC28600F792ED /* 128.png in Resources */ = {isa = PBXBuildFile; fileRef = 17CE489C2C9EC28500F792ED /* 128.png */; };
 		592A3F1725CFF93D0062B783 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 592A3F1625CFF93D0062B783 /* GoogleService-Info.plist */; };
 		595F23A525CEFBFE0053416C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F239A25CEFBFD0053416C /* Settings.swift */; };
 		595F23A625CEFBFE0053416C /* Entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 595F239B25CEFBFD0053416C /* Entitlements */; };
@@ -19,12 +21,13 @@
 		595F23AF25CEFBFE0053416C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F23A425CEFBFE0053416C /* WebView.swift */; };
 		59E8A9672ACF01D800FF3934 /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E8A9662ACF01D800FF3934 /* IAP.swift */; };
 		59E8A9692ACF084A00FF3934 /* pwaShellStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 59E8A9682ACF084A00FF3934 /* pwaShellStore.storekit */; };
-		CDC0FE292388222C002C8D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC0FE252388222B002C8D56 /* Main.storyboard */; };
 		CDC0FE2A2388222C002C8D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC0FE272388222B002C8D56 /* LaunchScreen.storyboard */; };
 		E1E260C850014D6B34B487B0 /* Pods_pwa_shell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9D7FFB2FBE6EEBCA807B6A /* Pods_pwa_shell.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173FB0CF2C9EC4DF00CE2EB8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+		17CE489C2C9EC28500F792ED /* 128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 128.png; path = "pwa-shell/Assets.xcassets/AppIcon.appiconset/128.png"; sourceTree = "<group>"; };
 		4C1C2162A8048FDF52B2A9D0 /* Pods-pwa-shell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pwa-shell.release.xcconfig"; path = "Target Support Files/Pods-pwa-shell/Pods-pwa-shell.release.xcconfig"; sourceTree = "<group>"; };
 		592A3F1625CFF93D0062B783 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "pwa-shell/Entitlements/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59333BAA25CFF706003392A4 /* PWAShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWAShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +45,6 @@
 		59E8A9682ACF084A00FF3934 /* pwaShellStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = pwaShellStore.storekit; sourceTree = "<group>"; };
 		BE9D7FFB2FBE6EEBCA807B6A /* Pods_pwa_shell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pwa_shell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE8E5C625AE96C07F8AADED /* Pods-pwa-shell.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pwa-shell.debug.xcconfig"; path = "Target Support Files/Pods-pwa-shell/Pods-pwa-shell.debug.xcconfig"; sourceTree = "<group>"; };
-		CDC0FE262388222B002C8D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "pwa-shell/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		CDC0FE282388222B002C8D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "pwa-shell/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		CD89F880237E9D9200C436A1 = {
 			isa = PBXGroup;
 			children = (
+				173FB0CF2C9EC4DF00CE2EB8 /* Main.storyboard */,
 				59E8A9662ACF01D800FF3934 /* IAP.swift */,
 				59E8A9682ACF084A00FF3934 /* pwaShellStore.storekit */,
 				595F23A225CEFBFE0053416C /* AppDelegate.swift */,
@@ -92,7 +95,7 @@
 				595F23A125CEFBFE0053416C /* ViewController.swift */,
 				595F23A425CEFBFE0053416C /* WebView.swift */,
 				CDC0FE272388222B002C8D56 /* LaunchScreen.storyboard */,
-				CDC0FE252388222B002C8D56 /* Main.storyboard */,
+				17CE489C2C9EC28500F792ED /* 128.png */,
 				30FCACC6A7BF53CD6D9CF6C0 /* Pods */,
 				90E46E861CB86F5FAF46BED9 /* Frameworks */,
 				59333BAA25CFF706003392A4 /* PWAShell.app */,
@@ -164,9 +167,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173FB0D02C9EC4DF00CE2EB8 /* Main.storyboard in Resources */,
 				595F23A625CEFBFE0053416C /* Entitlements in Resources */,
-				CDC0FE292388222C002C8D56 /* Main.storyboard in Resources */,
 				592A3F1725CFF93D0062B783 /* GoogleService-Info.plist in Resources */,
+				17CE489D2C9EC28600F792ED /* 128.png in Resources */,
 				CDC0FE2A2388222C002C8D56 /* LaunchScreen.storyboard in Resources */,
 				59E8A9692ACF084A00FF3934 /* pwaShellStore.storekit in Resources */,
 				595F23A725CEFBFE0053416C /* Assets.xcassets in Resources */,
@@ -236,14 +240,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CDC0FE252388222B002C8D56 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDC0FE262388222B002C8D56 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CDC0FE272388222B002C8D56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -384,7 +380,7 @@
 				CODE_SIGN_ENTITLEMENTS = "pwa-shell/Entitlements/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4GQ6LUQ5AU;
+				DEVELOPMENT_TEAM = HJ5X5Y5CLS;
 				INFOPLIST_FILE = "pwa-shell/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
@@ -412,7 +408,7 @@
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_ENTITLEMENTS = "pwa-shell/Entitlements/Entitlements.plist";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4GQ6LUQ5AU;
+				DEVELOPMENT_TEAM = HJ5X5Y5CLS;
 				INFOPLIST_FILE = "pwa-shell/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;

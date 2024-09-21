@@ -1,11 +1,3 @@
-//
-//  Settings.swift
-//  pwa-shell
-//
-//  Created by Gleb Khmyznikov on 11/23/19.
-//
-//
-
 import WebKit
 
 struct Cookie {
@@ -13,22 +5,24 @@ struct Cookie {
     var value: String
 }
 
-let gcmMessageIDKey = "87336923954"
+let gcmMessageIDKey = "1052230122712" // update this with actual ID if using Firebase
 
-let rootUrl = URL(string: "http://localhost/apple")!
+// URL for first launch
+let rootUrl = URL(string: "https://app.xpertell.com")!
 
-// rootUrl should be in allowedOrigins. allowedOrigins + authOrigins <= 10 domains max.
-// All domains should be in WKAppBoundDomains list
-let allowedOrigins = [ "app.xpertell.com", "localhost" ]
-let authOrigins = [ "app.xpertell.com" ]
-// If you don't need Offline support and you need a lot of domains, you can
-// disable limitsNavigationsToAppBoundDomains in WebView.swift
-// it's not recommended because Service Worker will be not available for your app
+// allowed origin is for what we are sticking to pwa domain
+// This should also appear in Info.plist
+let allowedOrigins: [String] = ["app.xpertell.com"]
 
-let platformCookie = Cookie(name: "app-platform", value: "ios/ipados")
+// auth origins will open in modal and show toolbar for back into the main origin.
+// These should also appear in Info.plist
+let authOrigins: [String] = []
+// allowedOrigins + authOrigins <= 10
+
+let platformCookie = Cookie(name: "app-platform", value: "iOS App Store")
 
 // UI options
-let displayMode = "fullscreen" // standalone / fullscreen.
+let displayMode = "standalone" // standalone / fullscreen.
 let adaptiveUIStyle = true     // iOS 15+ only. Change app theme on the fly to dark/light related to WebView background color.
 let overrideStatusBar = false   // iOS 13-14 only. if you don't support dark/light system theme.
 let statusBarTheme = "dark"    // dark / light, related to override option.
