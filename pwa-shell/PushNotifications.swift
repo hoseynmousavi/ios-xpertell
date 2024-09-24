@@ -75,16 +75,16 @@ func parseSubscribeMessage(message: WKScriptMessage) -> [SubscribeMessage] {
 func returnPermissionResult(isGranted: Bool){
     DispatchQueue.main.async(execute: {
         if (isGranted){
-            PWAShell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('push-permission-request', { detail: 'granted' }))")
+            Xpertell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('push-permission-request', { detail: 'granted' }))")
         }
         else {
-            PWAShell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('push-permission-request', { detail: 'denied' }))")
+            Xpertell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('push-permission-request', { detail: 'denied' }))")
         }
     })
 }
 func returnPermissionState(state: String){
     DispatchQueue.main.async(execute: {
-        PWAShell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('push-permission-state', { detail: '\(state)' }))")
+        Xpertell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('push-permission-state', { detail: '\(state)' }))")
     })
 }
 
@@ -142,9 +142,9 @@ func handlePushState() {
 }
 
 func checkViewAndEvaluate(event: String, detail: String) {
-    if (!PWAShell.webView.isHidden && !PWAShell.webView.isLoading ) {
+    if (!Xpertell.webView.isHidden && !Xpertell.webView.isLoading ) {
         DispatchQueue.main.async(execute: {
-            PWAShell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('\(event)', { detail: \(detail) }))")
+            Xpertell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('\(event)', { detail: \(detail) }))")
         })
     }
     else {

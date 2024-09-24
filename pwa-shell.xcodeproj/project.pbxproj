@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		173FB0D02C9EC4DF00CE2EB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 173FB0CF2C9EC4DF00CE2EB8 /* Main.storyboard */; };
 		17CE489D2C9EC28600F792ED /* 128.png in Resources */ = {isa = PBXBuildFile; fileRef = 17CE489C2C9EC28500F792ED /* 128.png */; };
+		276095232CA32FB400E260BD /* launch-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 276095222CA32FB400E260BD /* launch-512.png */; };
+		276095252CA32FCA00E260BD /* launch-256.png in Resources */ = {isa = PBXBuildFile; fileRef = 276095242CA32FCA00E260BD /* launch-256.png */; };
+		27B2DBE52CA320290075B3EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B2DBE42CA320290075B3EE /* Main.storyboard */; };
 		592A3F1725CFF93D0062B783 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 592A3F1625CFF93D0062B783 /* GoogleService-Info.plist */; };
 		595F23A525CEFBFE0053416C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F239A25CEFBFD0053416C /* Settings.swift */; };
 		595F23A625CEFBFE0053416C /* Entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 595F239B25CEFBFD0053416C /* Entitlements */; };
@@ -26,11 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		173FB0CF2C9EC4DF00CE2EB8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		17CE489C2C9EC28500F792ED /* 128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 128.png; path = "pwa-shell/Assets.xcassets/AppIcon.appiconset/128.png"; sourceTree = "<group>"; };
+		276095222CA32FB400E260BD /* launch-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-512.png"; sourceTree = "<group>"; };
+		276095242CA32FCA00E260BD /* launch-256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-256.png"; sourceTree = "<group>"; };
+		27B2DBE32CA320290075B3EE /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "../ios-pwa-wrap/pwa-shell/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		4C1C2162A8048FDF52B2A9D0 /* Pods-pwa-shell.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pwa-shell.release.xcconfig"; path = "Target Support Files/Pods-pwa-shell/Pods-pwa-shell.release.xcconfig"; sourceTree = "<group>"; };
 		592A3F1625CFF93D0062B783 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "pwa-shell/Entitlements/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		59333BAA25CFF706003392A4 /* PWAShell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWAShell.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59333BAA25CFF706003392A4 /* Xpertell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xpertell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		595F239A25CEFBFD0053416C /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = "pwa-shell/Settings.swift"; sourceTree = "<group>"; };
 		595F239B25CEFBFD0053416C /* Entitlements */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Entitlements; path = "pwa-shell/Entitlements"; sourceTree = "<group>"; };
 		595F239C25CEFBFD0053416C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "pwa-shell/Assets.xcassets"; sourceTree = "<group>"; };
@@ -80,7 +84,6 @@
 		CD89F880237E9D9200C436A1 = {
 			isa = PBXGroup;
 			children = (
-				173FB0CF2C9EC4DF00CE2EB8 /* Main.storyboard */,
 				59E8A9662ACF01D800FF3934 /* IAP.swift */,
 				59E8A9682ACF084A00FF3934 /* pwaShellStore.storekit */,
 				595F23A225CEFBFE0053416C /* AppDelegate.swift */,
@@ -90,15 +93,18 @@
 				592A3F1625CFF93D0062B783 /* GoogleService-Info.plist */,
 				595F23A325CEFBFE0053416C /* Printer.swift */,
 				595F239F25CEFBFE0053416C /* PushNotifications.swift */,
+				27B2DBE42CA320290075B3EE /* Main.storyboard */,
 				595F239D25CEFBFD0053416C /* SceneDelegate.swift */,
 				595F239A25CEFBFD0053416C /* Settings.swift */,
 				595F23A125CEFBFE0053416C /* ViewController.swift */,
+				276095242CA32FCA00E260BD /* launch-256.png */,
 				595F23A425CEFBFE0053416C /* WebView.swift */,
 				CDC0FE272388222B002C8D56 /* LaunchScreen.storyboard */,
+				276095222CA32FB400E260BD /* launch-512.png */,
 				17CE489C2C9EC28500F792ED /* 128.png */,
 				30FCACC6A7BF53CD6D9CF6C0 /* Pods */,
 				90E46E861CB86F5FAF46BED9 /* Frameworks */,
-				59333BAA25CFF706003392A4 /* PWAShell.app */,
+				59333BAA25CFF706003392A4 /* Xpertell.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,7 +129,7 @@
 			packageProductDependencies = (
 			);
 			productName = "pwa-shell";
-			productReference = 59333BAA25CFF706003392A4 /* PWAShell.app */;
+			productReference = 59333BAA25CFF706003392A4 /* Xpertell.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -167,9 +173,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				173FB0D02C9EC4DF00CE2EB8 /* Main.storyboard in Resources */,
 				595F23A625CEFBFE0053416C /* Entitlements in Resources */,
+				276095232CA32FB400E260BD /* launch-512.png in Resources */,
 				592A3F1725CFF93D0062B783 /* GoogleService-Info.plist in Resources */,
+				276095252CA32FCA00E260BD /* launch-256.png in Resources */,
+				27B2DBE52CA320290075B3EE /* Main.storyboard in Resources */,
 				17CE489D2C9EC28600F792ED /* 128.png in Resources */,
 				CDC0FE2A2388222C002C8D56 /* LaunchScreen.storyboard in Resources */,
 				59E8A9692ACF084A00FF3934 /* pwaShellStore.storekit in Resources */,
@@ -240,6 +248,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		27B2DBE42CA320290075B3EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27B2DBE32CA320290075B3EE /* Main.storyboard */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		CDC0FE272388222B002C8D56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -380,8 +396,11 @@
 				CODE_SIGN_ENTITLEMENTS = "pwa-shell/Entitlements/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJ5X5Y5CLS;
 				INFOPLIST_FILE = "pwa-shell/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Xpertell;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -390,13 +409,15 @@
 				);
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xpertell.app;
-				PRODUCT_NAME = PWAShell;
+				PRODUCT_NAME = Xpertell;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -407,9 +428,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_ENTITLEMENTS = "pwa-shell/Entitlements/Entitlements.plist";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HJ5X5Y5CLS;
 				INFOPLIST_FILE = "pwa-shell/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Xpertell;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,12 +443,14 @@
 				);
 				MARKETING_VERSION = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xpertell.app;
-				PRODUCT_NAME = PWAShell;
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				PRODUCT_NAME = Xpertell;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,6";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

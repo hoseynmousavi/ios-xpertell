@@ -54,38 +54,38 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentInteract
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        PWAShell.webView.frame = calcWebviewFrame(webviewView: webviewView, toolbarView: nil)
+        Xpertell.webView.frame = calcWebviewFrame(webviewView: webviewView, toolbarView: nil)
     }
     
     @objc func keyboardWillHide(_ notification: NSNotification) {
-        PWAShell.webView.setNeedsLayout()
+        Xpertell.webView.setNeedsLayout()
     }
     
     func initWebView() {
-        PWAShell.webView = createWebView(container: webviewView, WKSMH: self, WKND: self, NSO: self, VC: self)
-        webviewView.addSubview(PWAShell.webView);
+        Xpertell.webView = createWebView(container: webviewView, WKSMH: self, WKND: self, NSO: self, VC: self)
+        webviewView.addSubview(Xpertell.webView);
         
-        PWAShell.webView.uiDelegate = self;
+        Xpertell.webView.uiDelegate = self;
         
-        PWAShell.webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        Xpertell.webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
 
         if(pullToRefresh){
             let refreshControl = UIRefreshControl()
             refreshControl.addTarget(self, action: #selector(refreshWebView(_:)), for: UIControl.Event.valueChanged)
-            PWAShell.webView.scrollView.addSubview(refreshControl)
-            PWAShell.webView.scrollView.bounces = true
+            Xpertell.webView.scrollView.addSubview(refreshControl)
+            Xpertell.webView.scrollView.bounces = true
         }
 
         if #available(iOS 15.0, *), adaptiveUIStyle {
-            themeObservation = PWAShell.webView.observe(\.underPageBackgroundColor) { [unowned self] webView, _ in
-                currentWebViewTheme = PWAShell.webView.underPageBackgroundColor.isLight() ?? true ? .light : .dark
+            themeObservation = Xpertell.webView.observe(\.underPageBackgroundColor) { [unowned self] webView, _ in
+                currentWebViewTheme = Xpertell.webView.underPageBackgroundColor.isLight() ?? true ? .light : .dark
                 self.overrideUIStyle()
             }
         }
     }
 
     @objc func refreshWebView(_ sender: UIRefreshControl) {
-        PWAShell.webView?.reload()
+        Xpertell.webView?.reload()
         sender.endRefreshing()
     }
 
@@ -116,7 +116,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentInteract
     
     func overrideUIStyle(toDefault: Bool = false) {
         if #available(iOS 15.0, *), adaptiveUIStyle {
-            if (((htmlIsLoaded && !PWAShell.webView.isHidden) || toDefault) && self.currentWebViewTheme != .unspecified) {
+            if (((htmlIsLoaded && !Xpertell.webView.isHidden) || toDefault) && self.currentWebViewTheme != .unspecified) {
                 UIApplication
                     .shared
                     .connectedScenes
@@ -133,7 +133,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentInteract
     }
     
     @objc func loadRootUrl() {
-        PWAShell.webView.load(URLRequest(url: SceneDelegate.universalLinkToLaunch ?? rootUrl))
+        Xpertell.webView.load(URLRequest(url: SceneDelegate.universalLinkToLaunch ?? rootUrl))
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!){
@@ -143,7 +143,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentInteract
         self.animateConnectionProblem(false)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-            PWAShell.webView.isHidden = false
+            Xpertell.webView.isHidden = false
             self.loadingView.isHidden = true
            
             self.setProgress(0.0, false)
@@ -176,10 +176,10 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentInteract
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
 
         if (keyPath == #keyPath(WKWebView.estimatedProgress) &&
-                PWAShell.webView.isLoading &&
+            Xpertell.webView.isLoading &&
                 !self.loadingView.isHidden &&
                 !self.htmlIsLoaded) {
-                    var progress = Float(PWAShell.webView.estimatedProgress);
+                    var progress = Float(Xpertell.webView.estimatedProgress);
                     
                     if (progress >= 0.8) { progress = 1.0; };
                     if (progress >= 0.3) { self.animateConnectionProblem(false); }
@@ -212,7 +212,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentInteract
     }
         
     deinit {
-        PWAShell.webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
+        Xpertell.webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
     }
 }
 
@@ -242,7 +242,7 @@ extension ViewController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         switch message.name {
             case "print":
-                printView(webView: PWAShell.webView)
+                printView(webView: Xpertell.webView)
             case "push-subscribe":
                 handleSubscribeTouch(message: message)
             case "push-permission-request":
