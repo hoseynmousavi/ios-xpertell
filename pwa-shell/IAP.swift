@@ -65,16 +65,21 @@ struct TransactionInfo: Codable {
     }
 
     func purchaseProduct(productID: String, quantity: Int) async throws {
+        returnLog(jsonString: productID)
          guard let product = products.first(where: { $0.id == productID }) else {
              // Product not found.
+             returnLog(jsonString: "not found")
              throw ProductError.productNotFound
          }
+
+        returnLog(jsonString: "found it")
 
         let purchaseOption = Product.PurchaseOption.quantity(quantity)
         let purchaseOptions: Set<Product.PurchaseOption> = [purchaseOption]
 
         do {
             let result = try await product.purchase(options: purchaseOptions)
+            print(result)
             switch result {
             case .success(let verificationResult):
                 if let transaction = try? verificationResult.payloadValue {
@@ -134,6 +139,12 @@ struct TransactionInfo: Codable {
 }
 
 // push results to webview
+
+func returnLog(jsonString: String){
+    DispatchQueue.main.async(execute: {
+        Xpertell.webView.evaluateJavaScript("this.dispatchEvent(new CustomEvent('iap-log', { detail: '\(jsonString)' }))")
+    })
+}
 
 func returnProductsResult(jsonString: String){
     DispatchQueue.main.async(execute: {
